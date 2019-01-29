@@ -1,0 +1,25 @@
+<%= form_for @user do |form| %>
+  <div>
+    <%= form.label :name %><br>
+    <%= form.text_field :name, autofocus: true %>
+  </div><br>
+
+  <div>
+    <%= form.label :email %><br>
+    <%= form.text_field :email %>
+  </div><br>
+
+  <div>
+    <%= form.label :password %><br>
+    <%= form.password_field :password %>
+  </div><br>
+
+  <div>
+    <%= form.label :password_confirmation %><br>
+    <%= form.password_field :password_confirmation %>
+  </div><br>
+
+  <div>
+    <%= form.submit 'Sign Up' %>
+  </div>
+<% end %>
