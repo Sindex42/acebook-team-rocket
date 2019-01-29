@@ -26,3 +26,4 @@ Metrics/LineLength:
 AllCops:
   Exclude:
     - 'db/schema.rb'
+    - 'vendor/bundle/**/*'
