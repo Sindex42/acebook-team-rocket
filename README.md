@@ -20,7 +20,14 @@ First, clone this repository. Then:
 > bundle install
 > bin/rails db:create
 > bin/rails db:migrate
-
-> bundle exec rspec # Run the tests to ensure it works
-> bin/rails server # Start the server at localhost:3000
 ```
+
+## Testing
+
+To run the tests: `bundle exec rspec`
+
+
+## To view in browser
+
+1. Start the server `bin/rails server`
+2. Navigate to localhost:3000
