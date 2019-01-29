@@ -7,6 +7,8 @@ ActiveRecord::Schema.define(version: 20_170_526_114_520) do
   create_table 'posts', force: :cascade do |t|
     t.string 'message'
     t.datetime 'created_at', null: false
+
     t.datetime 'updated_at', null: false
+
   end
 end
