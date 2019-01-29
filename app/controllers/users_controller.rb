@@ -5,7 +5,7 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
-    @user.email.downcase!
+    @user.email.downcase! if @user.email 
 
     if @user.save
       flash[:notice] = 'Account created successfully!'
