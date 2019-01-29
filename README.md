@@ -23,7 +23,7 @@ To run the tests: `bundle exec rspec`
 ## Usage
 
 1. Start the server `bin/rails server`
-2. Navigate to the following page [http://localhost:9292](http://localhost:3000)
+2. Navigate to the following page [http://localhost:3000](http://localhost:3000)
 
 ### Signing up
 
