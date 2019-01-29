@@ -22,3 +22,7 @@ Metrics/LineLength:
     - 'spec/spec_helper.rb'
     - 'spec/rails_helper.rb'
     - 'db/seeds.rb'
+
+AllCops:
+  Exclude:
+    - 'db/schema.rb'
