@@ -1,4 +1,5 @@
 # AceBook
+[![Build Status](https://travis-ci.com/Sindex42/acebook-team-rocket.svg?branch=master)](https://travis-ci.com/Sindex42/acebook-team-rocket)
 
 REQUIRED INSTRUCTIONS:
 
