@@ -1,0 +1,24 @@
+Style/BlockComments:
+  Exclude:
+    - 'spec/spec_helper.rb'
+
+Style/Documentation:
+  Enabled: false
+
+Style/MixinUsage:
+  Exclude:
+    - 'bin/setup'
+    - 'bin/update'
+
+Style/SymbolArray:
+  Exclude:
+    - 'Gemfile'
+
+Metrics/LineLength:
+  Exclude:
+    - 'Rakefile'
+    - 'Gemfile'
+    - 'config/initializers/wrap_parameters.rb'
+    - 'spec/spec_helper.rb'
+    - 'spec/rails_helper.rb'
+    - 'db/seeds.rb'
