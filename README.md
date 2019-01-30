@@ -2,6 +2,7 @@
 [![Build Status](https://travis-ci.com/Sindex42/acebook-team-rocket.svg?branch=master)](https://travis-ci.com/Sindex42/acebook-team-rocket)
 [![Maintainability](https://api.codeclimate.com/v1/badges/265bb465dc552749142e/maintainability)](https://codeclimate.com/github/Sindex42/acebook-team-rocket/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/265bb465dc552749142e/test_coverage)](https://codeclimate.com/github/Sindex42/acebook-team-rocket/test_coverage)
+
 Our Trello board is located here: https://trello.com/b/wJgduTRo/acebook-team-rocket
 
 
