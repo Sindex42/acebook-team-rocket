@@ -1,6 +1,7 @@
 # AceBook
 [![Build Status](https://travis-ci.com/Sindex42/acebook-team-rocket.svg?branch=master)](https://travis-ci.com/Sindex42/acebook-team-rocket)
 [![Maintainability](https://api.codeclimate.com/v1/badges/265bb465dc552749142e/maintainability)](https://codeclimate.com/github/Sindex42/acebook-team-rocket/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/265bb465dc552749142e/test_coverage)](https://codeclimate.com/github/Sindex42/acebook-team-rocket/test_coverage)
 
 Our Trello board is located here: https://trello.com/b/wJgduTRo/acebook-team-rocket
 
@@ -37,7 +38,7 @@ To run the tests: `bundle exec rspec`
 Tech | Description
 ------------- | -------------
 [Ruby](https://www.ruby-lang.org/en/) | Main backend language
-[Ruby on Rails](https://rubyonrails.org/) | Ruby web application framework 
+[Ruby on Rails](https://rubyonrails.org/) | Ruby web application framework
 [Travis CI](https://travis-ci.org/) | Continuous integration running tests and linters before merging branches
 [Code Climate](https://codeclimate.com/) | Automated code reviview for code quality and complexity
 [postgresql](https://www.postgresql.org/) | Object-relational database management system
