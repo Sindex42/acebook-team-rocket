@@ -51,6 +51,10 @@ Pending | ---
 [Heroku](https://www.heroku.com/) | hosting
 
 
+## Learning log
+
+* To see a log of our learnings throughout this project, please refer to our project [wiki](https://github.com/Sindex42/acebook-team-rocket/wiki)
+
 ## Contributors
 
 * [Connor Kam-Cheong](https://github.com/sindex42)
