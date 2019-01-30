@@ -8,8 +8,8 @@ RSpec.feature 'Home Page', type: :feature do
     click_link 'Sign Up'
     fill_in 'user_name', with: 'Edam Brie'
     fill_in 'user_email', with: 'cheese@mail.com'
-    fill_in 'user_password', with: 'ilikecheese'
-    fill_in 'user_password_confirmation', with: 'ilikecheese'
+    fill_in 'user_password', with: 'likecheese'
+    fill_in 'user_password_confirmation', with: 'likecheese'
     click_button 'Sign Up'
 
     expect(current_path).to eq '/posts'
@@ -27,5 +27,19 @@ RSpec.feature 'Home Page', type: :feature do
 
     expect(current_path).to eq '/users'
     expect(page).to have_content("Couldn't create account")
+  end
+
+  scenario 'A user cannot sign up with more than 10 character password' do
+    message = "Password length must be between 6-10 characters."
+    visit '/'
+    click_link 'Sign Up'
+    fill_in 'user_name', with: 'Edam Brie'
+    fill_in 'user_email', with: 'cheese@email.com'
+    fill_in 'user_password', with: 'ilikecheese'
+    fill_in 'user_password_confirmation', with: 'ilikecheese'
+    click_button 'Sign Up'
+
+    expect(current_path).to eq '/users'
+    expect(page).to have_content(message)
   end
 end

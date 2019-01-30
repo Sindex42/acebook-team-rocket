@@ -4,6 +4,7 @@ class UsersController < ApplicationController
   ERROR_MSG = "Couldn't create account. " \
               'Please make sure you are using a valid email' \
               ' and password and try again.'
+  PASS_ERROR = "Password length must be between 6-10 characters."
 
   def new
     @user = User.new
