@@ -1,9 +1,18 @@
+env:
+ global:
+   - CC_TEST_REPORTER_ID=87b67e9610702652e76b79e0c0d65b9d5e940165fb7b1621efaff1c79eb45dcb
 language: ruby
 rvm:
   - 2.5.0
+before_script:
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - ./cc-test-reporter before-build
 script:
   - bundle install --jobs=3 --retry=3
   - bin/rails db:create
   - bin/rails db:migrate
   - bundle exec rspec
   - bundle exec rubocop
+after_script:
+ - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
