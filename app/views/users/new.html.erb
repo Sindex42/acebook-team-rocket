@@ -1,4 +1,16 @@
 <%= form_for @user do |form| %>
+
+  <% if @user.errors.any? %>
+  <div id="errorExplanation">
+    <h3><%= pluralize(@user.errors.count, 'error') %>, couldn't create account:</h3>
+    <ul>
+      <% @user.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+  <% end %>
+
   <div>
     <%= form.label :name %><br>
     <%= form.text_field :name, autofocus: true %>
