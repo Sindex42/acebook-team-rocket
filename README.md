@@ -3,7 +3,8 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/265bb465dc552749142e/maintainability)](https://codeclimate.com/github/Sindex42/acebook-team-rocket/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/265bb465dc552749142e/test_coverage)](https://codeclimate.com/github/Sindex42/acebook-team-rocket/test_coverage)
 
-Our Trello board is located here: https://trello.com/b/wJgduTRo/acebook-team-rocket
+* Our application is deployed on [Heroku](https://acebook-team-rocket.herokuapp.com)
+* Our [Trello board](https://trello.com/b/wJgduTRo/acebook-team-rocket) 
 
 
 ## How to contribute to this project
@@ -43,13 +44,8 @@ Tech | Description
 [Code Climate](https://codeclimate.com/) | Automated code reviview for code quality and complexity
 [postgresql](https://www.postgresql.org/) | Object-relational database management system
 [Trello](https://trello.com/) | Tracking and organising workflow
-
-
-
-Pending | ---
-------------- | -------------
-[SimpleCov](https://github.com/colszowka/simplecov) | testing coverage
-[Heroku](https://www.heroku.com/) | hosting
+[SimpleCov](https://github.com/colszowka/simplecov) | Code coverage analysis tool for Ruby, badge provided trough Code Climate
+[Heroku](https://www.heroku.com/) | Cloud platform hosting service
 
 
 ## Learning log
