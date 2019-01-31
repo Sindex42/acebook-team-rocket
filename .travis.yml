@@ -1,24 +1,25 @@
 env:
- global:
-   - CC_TEST_REPORTER_ID=87b67e9610702652e76b79e0c0d65b9d5e940165fb7b1621efaff1c79eb45dcb
+  global:
+  - CC_TEST_REPORTER_ID=87b67e9610702652e76b79e0c0d65b9d5e940165fb7b1621efaff1c79eb45dcb
 language: ruby
 rvm:
-  - 2.5.0
+- 2.5.0
 before_script:
-  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
-  - chmod +x ./cc-test-reporter
-  - ./cc-test-reporter before-build
+- curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64
+  > ./cc-test-reporter
+- chmod +x ./cc-test-reporter
+- "./cc-test-reporter before-build"
 script:
-  - bundle install --jobs=3 --retry=3
-  - bin/rails db:create
-  - bin/rails db:migrate
-  - bundle exec rspec
-  - bundle exec rubocop
+- bundle install --jobs=3 --retry=3
+- bin/rails db:create
+- bin/rails db:migrate
+- bundle exec rspec
+- bundle exec rubocop
 after_script:
- - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
+- "./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT"
 deploy:
   provider: heroku
   api_key:
-    secure: ENV['API_KEY']
-  run: "rake db:migrate"
+    secure: tceohy6e0ImtXjln6n/g9dIu10BzVMQyo8UlHcVec4DDokzrACDiBmE2iKT9J14+2p6IMUtR82byIe17wWtI+e0CZHdNb+qIma07dm2lx59faRxTVw18al6YwsrTCjS5VrVwIn1SPS45u6Js5m0+RV+2fvcslqEDqhLFF41p6W8TZvuA0nrojg9LhjmLYHVPqcNAM8VmYnfPA0THxDbYVKYFrKffLorDZbWueo99IttqwPJoYTp6yWvE5iuLhXPjDdvlcp/fypO52uGPwaxGGNOXVpKGFPIeWbem/M9hQcX5yqX5uscQAufNstMhuFdTT3kVvzV1RWy4XrrroTEOrCQwgJfDB2luiLXw7sVtNtQ5a56ptCwFqAOGTVDoep3mrJWz0PwJ0k/ZeJhjGAexck94D8xH7AbYjcXdPvkQnv7JeFFvNk1s+SFnpTux4YaxcU8IkYdB5HII3+hT5amBB1nKd3V21IrNXLSD+hHTtLIA2Dp1AH9bbSF+GD7fu5GyYtFETc3VnS13vkopep0AHiLMY/o8y04uQPN4eshKf4QoXkCqYSvDr6G1OkqczZwNeAaAibmmKvgy/fjfRWuZEBZY3gqSrVoJnAXsPJZop/Rn/Ffqf/vLaJaWExhDJfI/3DagST+vlGB9/sjFKVEj1N3O2IDN57ekOFEK4bK3zCk=
+  run: rake db:migrate
   strategy: git
