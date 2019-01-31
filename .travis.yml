@@ -16,3 +16,9 @@ script:
   - bundle exec rubocop
 after_script:
  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
+deploy:
+  provider: heroku
+  api_key:
+    secure: ENV['API_KEY']
+  run: "rake db:migrate"
+  strategy: git
