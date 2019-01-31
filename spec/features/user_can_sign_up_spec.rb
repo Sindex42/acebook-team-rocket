@@ -1,15 +1,11 @@
 # frozen_string_literal: true
 
 require 'rails_helper'
+require 'spec_support'
 
 RSpec.feature 'Home Page', type: :feature do
   scenario 'Can sign up' do
-    visit '/'
-    click_link 'Sign Up'
-    fill_in 'user_name', with: 'Edam Brie'
-    fill_in 'user_email', with: 'cheese@mail.com'
-    fill_in 'user_password', with: 'likecheese'
-    fill_in 'user_password_confirmation', with: 'likecheese'
+    userSignup
     click_button 'Sign Up'
 
     expect(current_path).to eq '/posts'
@@ -17,11 +13,8 @@ RSpec.feature 'Home Page', type: :feature do
   end
 
   scenario 'A user must sign up with an email address' do
-    visit '/'
-    click_link 'Sign Up'
-    fill_in 'user_name', with: 'Officer Jenny'
-    fill_in 'user_password', with: 'ihatecrime'
-    fill_in 'user_password_confirmation', with: 'ihatecrime'
+    userSignup
+    fill_in 'user_email', with: ''
     click_button 'Sign Up'
 
     expect(current_path).to eq '/users'
@@ -30,11 +23,7 @@ RSpec.feature 'Home Page', type: :feature do
   end
 
   scenario "A user's passwords must be equal" do
-    visit '/'
-    click_link 'Sign Up'
-    fill_in 'user_name', with: 'Officer Jenny'
-    fill_in 'user_email', with: 'Jenny@PalletTownPD.com'
-    fill_in 'user_password', with: 'ihatecrime'
+    userSignup
     fill_in 'user_password_confirmation', with: 'ih8crime'
     click_button 'Sign Up'
 
@@ -44,12 +33,9 @@ RSpec.feature 'Home Page', type: :feature do
 
   scenario "A user's password must be 10 characters or shorter" do
     message = 'Password is too long (maximum is 10 characters)'
-    visit '/'
-    click_link 'Sign Up'
-    fill_in 'user_name', with: 'Edam Brie'
-    fill_in 'user_email', with: 'cheese@email.com'
-    fill_in 'user_password', with: 'ilikecheese'
-    fill_in 'user_password_confirmation', with: 'ilikecheese'
+    userSignup
+    fill_in 'user_password', with: 'ireallyhatecrime'
+    fill_in 'user_password_confirmation', with: 'ireallyhatecrime'
     click_button 'Sign Up'
 
     expect(current_path).to eq '/users'
@@ -59,12 +45,9 @@ RSpec.feature 'Home Page', type: :feature do
 
   scenario "A user's password must be 6 characters or longer" do
     message = 'Password is too short (minimum is 6 characters)'
-    visit '/'
-    click_link 'Sign Up'
-    fill_in 'user_name', with: 'Edam Brie'
-    fill_in 'user_email', with: 'cheese@email.com'
-    fill_in 'user_password', with: 'brie'
-    fill_in 'user_password_confirmation', with: 'brie'
+    userSignup
+    fill_in 'user_password', with: 'crime'
+    fill_in 'user_password_confirmation', with: 'crime'
     click_button 'Sign Up'
 
     expect(current_path).to eq '/users'
