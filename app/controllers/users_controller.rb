@@ -1,10 +1,6 @@
 # frozen_string_literal: true
 
 class UsersController < ApplicationController
-  ERROR_MSG = "Couldn't create account. " \
-              'Please make sure you are using a valid email' \
-              ' and password and try again.'
-
   def new
     @user = User.new
   end
@@ -17,7 +13,6 @@ class UsersController < ApplicationController
       flash[:notice] = 'Account created successfully!'
       redirect_to posts_url
     else
-      flash.now.alert = ERROR_MSG
       render :new
     end
   end

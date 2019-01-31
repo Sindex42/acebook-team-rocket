@@ -15,7 +15,7 @@ RSpec.describe UsersController, type: :controller do
       post :create, params: { user: {
         name: 'Edam Brie',
         email: 'cheese@mail.com',
-        password: 'ilikecheese'
+        password: 'likecheese'
       } }
 
       expect(response).to redirect_to(posts_url)
@@ -25,7 +25,7 @@ RSpec.describe UsersController, type: :controller do
       post :create, params: { user: {
         name: 'Edam Brie',
         email: 'cheese@mail.com',
-        password: 'ilikecheese'
+        password: 'likecheese'
       } }
 
       expect(User.find_by(email: 'cheese@mail.com')).to be
