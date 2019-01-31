@@ -20,8 +20,16 @@ after_script:
 deploy:
   provider: heroku
   api_key:
+<<<<<<< HEAD
     secure: R92rIRBDN806IZ+oWFvvKKyKetM0B+Gp5sx6xRWENdv6z2o0uI3+Hoyf6nt6JOQJ+3x9xaNlsE20FWjtA5oGba0yY9BplP3ueHltnnkjH+QS2gjJw1MGc41GkM9NdWZq8nnT4ZmnMXn71dU8saVbYiTXaZY0d8sw/BxNbbOJ2vbZsktEqtFaz4J+GlUIATgzxeXIWtKQHPG5tfM8Dl7vTcxjhYfbZryFNhJ9RXsRn3EohzX7Dcr3TfWYdAmCV44u79YKrFDtuYnX+HdppziF/oQ8hZgpxSsBvybWDHgSS03xN5Xim3deBeMR6knDNgUiCaUU1Ou6JFMxCPHuRWIc0cXv5KC9nOdq68Jmkxjf1/58D7XITvirnIdHZwvnqOeahK5Rh6+/1ct4LbPENJvhas6ZU+2Hkj4T2TcFqoSbdfMstJ0ck1ACombGm9EL+KakVhQ2UTTMNaevQ1dTZws4DOQSEdWZ8qBVqjeHFP8GXWVrvbY4ivwWNi+XM3m3Jz+QtjXZyVADY5xekiYaJRPKr+tSeQ3DNyqZTXsN37hPpO9hL8YJML2mIvK2RtJnzu5IF083IaBzbA+eMmncQDoK9dPWGGKH44iF97DLFjPjrWwGSFUwsZ9GmkGTwIMJkpkHjKHKVlaEp+tSYsNWfiz+2u2292/XHqxJUcNzMoEA3m0=
   app: acebook-team-rocket
   on:
     repo: Sindex42/acebook-team-rocket
   run: "rake db:migrate"
+=======
+    secure: zM3Mm6Cv7qES1ZkzZG0xVMHLWv1cLwNEtt8q97+mlfBtNZn3v8Guuhyg+A9HSFITDYiJccKdBtPH9E+Xs2Nde3DG5Oe5zYr/iVA8EaXz9UllEzi3Tb1czp59Y0Q3oJIQgTwsoa9h6SLKZsCNxOb5m+A76AO2WT0Ine/bI4q9QbDlg4M9cqJABwILy/Av9z9yOf9K1CuPCN4JLp+/K2yqTm9F2l0hYgLPv3R4GGcfJ+P0hbHzEjUhSdNOgLl3oEUOZ1q2dSPn1NUeM2v8V+Oezrr31xu29H6t1m79ptZmqSGdrNyim5IoHPimkVej8uQPWtmG0PESLgYlsfXW8L9nGU9oCuPgYZR6Ev2qn39lQnQ5c+OS6BPfEQvSjv6oCMwyZuD1iNCjowX4o2AT9mnYVVb7N8uMc0ck3wvCJuEpjBBVPxLjib/6geG/nfMhLthonwny0fxeva5nSgZEfML18BEfMdkurCBcBrPyhjJ9TYPvCzVi/JKh/UL9MIctNXYkWTXNZkXs6fOgMJpVOlG2nJ1fA05J6wt7yspku0sKYtDrMrYmokZveSekm74t3NRxqRi8zORIb7C/vekvERBqL812fiN6zRwOrEKVPWrGMEXSRuI7h18lmcuv8n25Bo8CDa0l3Rq8d+Ubdw1X9QQKE0hEI70jvla06eYXi+FLTlw=
+  app: acebook-team-rocket
+  on:
+    repo: Sindex42/acebook-team-rocket
+  run: rake db:migrate
+>>>>>>> 6f17bda9baf1a47b3c86b33765dc98538b7c9a97
