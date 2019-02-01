@@ -53,3 +53,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'simplecov', '~> 0.16.1'
 
 gem 'simplecov-console', '~> 0.4.2'
+
+gem 'orderly', '~> 0.0.3'
+
+gem 'timecop', '~> 0.9.1'

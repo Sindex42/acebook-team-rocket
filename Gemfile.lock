@@ -109,6 +109,9 @@ GEM
     nio4r (2.3.1)
     nokogiri (1.10.1)
       mini_portile2 (~> 2.4.0)
+    orderly (0.0.3)
+      capybara (>= 1.1)
+      rspec (>= 2.14)
     parallel (1.13.0)
     parser (2.6.0.0)
       ast (~> 2.4.0)
@@ -149,6 +152,10 @@ GEM
     rb-fsevent (0.10.3)
     rb-inotify (0.10.0)
       ffi (~> 1.0)
+    rspec (3.8.0)
+      rspec-core (~> 3.8.0)
+      rspec-expectations (~> 3.8.0)
+      rspec-mocks (~> 3.8.0)
     rspec-core (3.8.0)
       rspec-support (~> 3.8.0)
     rspec-expectations (3.8.2)
@@ -210,6 +217,7 @@ GEM
     thor (0.20.3)
     thread_safe (0.3.6)
     tilt (2.0.9)
+    timecop (0.9.1)
     travis (1.8.9)
       backports
       faraday (~> 0.9)
@@ -247,6 +255,7 @@ DEPENDENCIES
   capybara (~> 2.13)
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)
+  orderly (~> 0.0.3)
   pg
   puma (~> 3.7)
   rails (~> 5.1.1)
@@ -256,6 +265,7 @@ DEPENDENCIES
   selenium-webdriver
   simplecov (~> 0.16.1)
   simplecov-console (~> 0.4.2)
+  timecop (~> 0.9.1)
   travis
   tzinfo-data
   uglifier (>= 1.3.0)
