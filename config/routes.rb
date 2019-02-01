@@ -6,6 +6,9 @@ Rails.application.routes.draw do
   get 'users/new' => 'users#new', as: :new_user
   post 'users' => 'users#create'
 
+  get 'login' => 'sessions#new'
+  post 'login' => 'sessions#create'
+
   resources :posts
   root to: 'welcome#index'
 end
