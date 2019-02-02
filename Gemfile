@@ -37,8 +37,11 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
+  gem 'database_cleaner', '~> 1.7'
+  gem 'orderly', '~> 0.0.3'
   gem 'rspec-rails', '~> 3.5'
   gem 'selenium-webdriver'
+  gem 'timecop', '~> 0.9.1'
 end
 
 group :development do
@@ -53,7 +56,3 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'simplecov', '~> 0.16.1'
 
 gem 'simplecov-console', '~> 0.4.2'
-
-gem 'orderly', '~> 0.0.3'
-
-gem 'timecop', '~> 0.9.1'
