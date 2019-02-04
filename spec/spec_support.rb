@@ -10,8 +10,14 @@ def user_signup
 end
 
 def hello_message
-  click_button 'Sign Up'
+  visit '/'
+  click_link 'Sign Up'
+  fill_in 'user_name', with: 'Officer Jenny'
+  fill_in 'user_email', with: 'Jenny@PalletTownPD.com'
+  fill_in 'user_password', with: 'ihatecrime'
+  fill_in 'user_password_confirmation', with: 'ihatecrime'
+  click_on 'Sign Up'
   click_on 'New post'
-  3
-  click_button 'Submit'
+  fill_in 'post_message', with: 'hello'
+  click_on 'Submit'
 end

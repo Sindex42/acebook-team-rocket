@@ -20,7 +20,12 @@ class PostsController < ApplicationController
 
   def show; end
 
-  def update; end
+  def update
+    @post = Post.find(params[:id])
+    @post.message = params[:post][:message]
+    @post.save
+    redirect_to posts_path
+  end
 
   def destroy
     @post = Post.find(params[:id])

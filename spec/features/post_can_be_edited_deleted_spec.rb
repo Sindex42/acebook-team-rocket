@@ -12,7 +12,7 @@ RSpec.feature 'edit post', type: :feature do
 
   scenario 'An edited post can be displayed' do
     hello_message
-    click_button 'Edit'
+    click_on 'Edit'
     fill_in 'Message', with: 'Team Rocket HQ'
     click_button 'Submit'
     expect(page).to have_content('Team Rocket HQ')
@@ -20,6 +20,6 @@ RSpec.feature 'edit post', type: :feature do
 
   scenario 'Can delete post' do
     hello_message
-    expect(page).to have_link('Delete', href: '/posts/4')
+    expect(page).to have_link('Delete')
   end
 end
