@@ -5,6 +5,9 @@ Style/BlockComments:
 Style/Documentation:
   Enabled: false
 
+Style/GuardClause:
+  Enabled: false
+
 Style/MixinUsage:
   Exclude:
     - 'bin/setup'

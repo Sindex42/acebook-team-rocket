@@ -1,13 +1,15 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe SessionsController, type: :controller do
- let!(:user) do
-   User.create(
-     name: 'Officer Jenny',
-     email: 'Jenny@PalletTownPD',
-     password: 'ihatecrime'
-   )
- end
+  let!(:user) do
+    User.create(
+      name: 'Officer Jenny',
+      email: 'Misty@water.com',
+      password: 'ihatecrime'
+    )
+  end
 
   describe 'GET /new' do
     it 'responds with 200' do
@@ -16,14 +18,13 @@ RSpec.describe SessionsController, type: :controller do
     end
   end
 
-  describe 'POST /' do
+  describe 'POST /creates' do
     it 'responds with 200' do
-      post :create, params: { user: {
-        email: 'Jenny@PalletTownPD',
+      post :create, params: { login: {
+        email: 'Misty@water.com',
         password: 'ihatecrime'
       } }
-
-      expect(response).to redirect_to(posts_url)
+      expect(response).to redirect_to '/posts'
     end
   end
 end

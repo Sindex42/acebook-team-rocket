@@ -17,7 +17,7 @@ RSpec.describe UsersController, type: :controller do
         email: 'cheese@mail.com',
         password: 'likecheese'
       } }
-
+      
       expect(response).to redirect_to(posts_url)
     end
 
