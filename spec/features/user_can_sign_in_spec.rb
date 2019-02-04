@@ -10,6 +10,7 @@ RSpec.feature 'Sign In', type: :feature do
 
   scenario 'Can sign in' do
     visit '/'
+    click_link 'Log Out'
     click_link 'Sign In'
     fill_in 'login_email', with: 'Jenny@PalletTownPD.com'
     fill_in 'login_password', with: 'ihatecrime'

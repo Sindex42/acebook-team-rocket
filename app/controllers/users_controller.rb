@@ -11,6 +11,7 @@ class UsersController < ApplicationController
 
     if @user.save
       flash[:notice] = 'Account created successfully!'
+      session[:user_id] = @user.id.to_s
       redirect_to posts_url
     else
       render :new

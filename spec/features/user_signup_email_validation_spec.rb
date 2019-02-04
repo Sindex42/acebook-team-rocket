@@ -16,6 +16,7 @@ RSpec.feature 'User signup email validation', type: :feature do
 
   scenario "A user's email address must be unique" do
     click_button 'Sign Up'
+    click_link 'Log Out'
     user_signup
     click_button 'Sign Up'
 
