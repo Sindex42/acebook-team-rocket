@@ -25,8 +25,7 @@ RSpec.feature 'edit post', type: :feature do
 
   scenario 'A deleted post no longer is visible' do
     specific_message
-    click_on "Delete"
+    click_on 'Delete'
     expect(page).to_not have_content('Electric type')
   end
-
 end

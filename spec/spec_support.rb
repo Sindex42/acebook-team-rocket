@@ -31,6 +31,6 @@ def specific_message
   fill_in 'user_password_confirmation', with: 'geodude'
   click_on 'Sign Up'
   click_on 'New post'
-  fill_in 'post_message', with: 'I still wonder how an Electric type had the fortune to beat me...'
+  fill_in 'post_message', with: 'How did an Electric type beat me...'
   click_on 'Submit'
 end
