@@ -19,9 +19,8 @@ RSpec.feature 'edit post', type: :feature do
 
   scenario 'Only posts less than 10 minutes old can be edited' do
     hello_message
-    t = Time.local(3000, 11, 24, 01, 04, 44)
+    t = Time.local(3000, 11, 24, 0o1, 0o4, 44)
     Timecop.travel(t)
     expect(page).not_to have_content('Edit')
   end
-
 end
