@@ -14,11 +14,16 @@ class PostsController < ApplicationController
     @posts = Post.all.order('created_at DESC')
   end
 
-  def edit; end
+  def edit
+    @post = Post.find(params[:id])
+  end
 
-  def show; end
+  def show
+  end
 
-  def update; end
+  def update
+
+  end
 
   def destroy
     @post = Post.find(params[:id])
