@@ -21,3 +21,16 @@ def hello_message
   fill_in 'post_message', with: 'hello'
   click_on 'Submit'
 end
+
+def specific_message
+  visit '/'
+  click_link 'Sign Up'
+  fill_in 'user_name', with: 'Brock'
+  fill_in 'user_email', with: 'Brock@rock.com'
+  fill_in 'user_password', with: 'geodude'
+  fill_in 'user_password_confirmation', with: 'geodude'
+  click_on 'Sign Up'
+  click_on 'New post'
+  fill_in 'post_message', with: 'I still wonder how an Electric type had the fortune to beat me...'
+  click_on 'Submit'
+end

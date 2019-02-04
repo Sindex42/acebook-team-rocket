@@ -22,4 +22,11 @@ RSpec.feature 'edit post', type: :feature do
     hello_message
     expect(page).to have_link('Delete')
   end
+
+  scenario 'A deleted post no longer is visible' do
+    specific_message
+    click_on "Delete"
+    expect(page).to_not have_content('Electric type')
+  end
+
 end
