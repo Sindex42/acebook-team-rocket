@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require 'rails_helper'
-
 RSpec.feature 'edit post', type: :feature do
   let!(:user) { user_signup }
 
@@ -18,14 +17,11 @@ RSpec.feature 'edit post', type: :feature do
     expect(page).to have_content('Team Rocket HQ')
   end
 
-  scenario 'Can delete post' do
+  scenario 'Only posts less than 10 minutes old can be edited' do
     hello_message
-    expect(page).to have_link('Delete')
+    t = Time.local(3000, 11, 24, 01, 04, 44)
+    Timecop.travel(t)
+    expect(page).not_to have_content('Edit')
   end
 
-  scenario 'A deleted post no longer is visible' do
-    specific_message
-    click_on 'Delete'
-    expect(page).to_not have_content('Electric type')
-  end
 end
