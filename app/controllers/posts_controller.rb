@@ -18,12 +18,9 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
   end
 
-  def show
-  end
+  def show; end
 
-  def update
-
-  end
+  def update; end
 
   def destroy
     @post = Post.find(params[:id])

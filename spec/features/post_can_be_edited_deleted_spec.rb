@@ -7,8 +7,15 @@ RSpec.feature 'edit post', type: :feature do
 
   scenario 'Can edit post' do
     hello_message
-    click_on 'Edit'
-    expect(current_path).to eq '/posts/3/edit'
+    expect(page).to have_link('Edit', href: '/posts/3/edit')
+  end
+
+  scenario 'An edited post can be displayed' do
+    hello_message
+    click_button 'Edit'
+    fill_in 'Message', with: 'Team Rocket HQ'
+    click_button 'Submit'
+    expect(page).to have_content('Team Rocket HQ')
   end
 
   scenario 'Can delete post' do

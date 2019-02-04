@@ -12,6 +12,6 @@ end
 def hello_message
   click_button 'Sign Up'
   click_on 'New post'
-  fill_in 'Message', with: 'Hello'
+  3
   click_button 'Submit'
 end
