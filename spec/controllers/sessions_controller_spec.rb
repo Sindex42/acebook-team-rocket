@@ -27,6 +27,7 @@ RSpec.describe SessionsController, type: :controller do
       expect(response).to redirect_to '/posts'
     end
   end
+
   describe 'DELETE /' do
     it 'redirects to the login page' do
       delete :destroy
