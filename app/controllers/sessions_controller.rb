@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 class SessionsController < ApplicationController
+  # skip_before_action :authorize, :only => [:create, :sessions]
   def new; end
 
   def create
