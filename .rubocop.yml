@@ -17,6 +17,9 @@ Style/SymbolArray:
   Exclude:
     - 'Gemfile'
 
+Metrics/AbcSize:
+  Enabled: false
+
 Metrics/LineLength:
   Exclude:
     - 'Rakefile'
