@@ -5,9 +5,7 @@ require 'rails_helper'
 RSpec.describe SessionsController, type: :controller do
   let!(:user) do
     User.create(
-      name: 'Officer Jenny',
-      email: 'Misty@water.com',
-      password: 'ihatecrime'
+      name: 'Officer Jenny', email: 'Misty@water.com', password: 'ihatecrime'
     )
   end
 
@@ -21,10 +19,9 @@ RSpec.describe SessionsController, type: :controller do
   describe 'POST /creates' do
     it 'responds with 200' do
       post :create, params: { login: {
-        email: 'Misty@water.com',
-        password: 'ihatecrime'
+        email: 'Misty@water.com', password: 'ihatecrime'
       } }
-      expect(response).to redirect_to '/posts'
+      expect(response).to have_http_status(200)
     end
   end
 
