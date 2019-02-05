@@ -11,7 +11,26 @@ class PostsController < ApplicationController
   end
 
   def index
-    @posts = Post.all
+    @posts = Post.all.order('created_at DESC')
+  end
+
+  def edit
+    @post = Post.find(params[:id])
+  end
+
+  def show; end
+
+  def update
+    @post = Post.find(params[:id])
+    @post.message = params[:post][:message]
+    @post.save
+    redirect_to posts_path
+  end
+
+  def destroy
+    @post = Post.find(params[:id])
+    @post.destroy
+    redirect_to posts_path
   end
 
   private
