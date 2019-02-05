@@ -20,6 +20,9 @@ Style/SymbolArray:
 Metrics/AbcSize:
   Enabled: false
 
+Metrics/BlockLength:
+  Enabled: false
+
 Metrics/LineLength:
   Exclude:
     - 'Rakefile'
