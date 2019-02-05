@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 class UsersController < ApplicationController
-  skip_before_action :authorize, only: [:index, :login, :new_user]
 
   def new
     @user = User.new
