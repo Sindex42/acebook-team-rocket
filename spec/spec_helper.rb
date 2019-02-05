@@ -2,6 +2,9 @@
 
 require 'simplecov'
 require 'simplecov-console'
+
+require 'spec_support'
+
 SimpleCov.formatter = SimpleCov::Formatter::Console
 SimpleCov.start
 # frozen_string_literal: true

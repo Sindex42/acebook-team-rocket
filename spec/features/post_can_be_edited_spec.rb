@@ -18,7 +18,7 @@ RSpec.feature 'edit post', type: :feature do
   end
 
   scenario 'Only posts less than 10 minutes old can be edited' do
-    click_on 'Sign Up'
+    click_button 'Sign Up'
     click_on 'New post'
     Timecop.travel(2000, 11, 24, 0o1, 0o4, 44)
     fill_in 'post_message', with: 'Y2K was a fraud'

@@ -1,0 +1,17 @@
+<h1>Sign In</h1>
+
+<%= form_for :login do |form| %>
+  <div>
+    <%= form.label :email %><br>
+    <%= form.text_field :email %>
+  </div><br>
+
+  <div>
+    <%= form.label :password %><br>
+    <%= form.password_field :password %>
+  </div><br>
+
+  <div>
+    <%= form.submit 'Sign In' %>
+  </div>
+<% end %>

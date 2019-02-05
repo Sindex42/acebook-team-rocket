@@ -5,6 +5,9 @@ Style/BlockComments:
 Style/Documentation:
   Enabled: false
 
+Style/GuardClause:
+  Enabled: false
+
 Style/MixinUsage:
   Exclude:
     - 'bin/setup'
@@ -13,6 +16,12 @@ Style/MixinUsage:
 Style/SymbolArray:
   Exclude:
     - 'Gemfile'
+
+Metrics/AbcSize:
+  Enabled: false
+
+Metrics/BlockLength:
+  Enabled: false
 
 Metrics/LineLength:
   Exclude:

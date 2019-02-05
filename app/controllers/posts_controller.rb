@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class PostsController < ApplicationController
+  before_action :require_login
+
   def new
     @post = Post.new
   end
@@ -37,5 +39,16 @@ class PostsController < ApplicationController
 
   def post_params
     params.require(:post).permit(:message)
+  end
+
+  def require_login
+    unless logged_in?
+      flash[:alert] = 'You must be logged in to access this section'
+      redirect_to root_path
+    end
+  end
+
+  def logged_in?
+    !current_user.nil?
   end
 end
