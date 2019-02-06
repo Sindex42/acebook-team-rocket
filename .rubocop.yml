@@ -2,6 +2,9 @@ Style/BlockComments:
   Exclude:
     - 'spec/spec_helper.rb'
 
+Style/ClassAndModuleChildren:
+  Enabled: false
+
 Style/Documentation:
   Enabled: false
 
