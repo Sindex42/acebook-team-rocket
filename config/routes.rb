@@ -1,6 +1,12 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  namespace :api do
+    namespace :v1 do
+      resources :posts
+    end
+  end
+
   get 'users/new' => 'users#new', as: :new_user
   post 'users' => 'users#create'
 
@@ -8,6 +14,6 @@ Rails.application.routes.draw do
   post 'login' => 'sessions#create'
   delete '/logout' => 'sessions#destroy'
 
-  resources :posts
+  # resources :posts
   root to: 'welcome#index'
 end
