@@ -22,4 +22,6 @@
 
 .byebug_history
 
+coverage/.resultset.json
+coverage/.last_run.json
 /coverage/
