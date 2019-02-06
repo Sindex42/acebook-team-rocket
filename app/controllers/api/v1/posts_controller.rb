@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class Api::V1::PostsController < ApplicationController
-  before_action :require_login
+  # before_action :require_login
 
   def new
     @post = Post.new
