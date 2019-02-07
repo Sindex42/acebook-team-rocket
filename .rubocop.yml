@@ -35,6 +35,10 @@ Metrics/LineLength:
     - 'spec/rails_helper.rb'
     - 'db/seeds.rb'
 
+Metrics/MethodLength:
+  Exclude:
+    - 'app/controllers/application_controller.rb'    
+
 AllCops:
   Exclude:
     - 'db/schema.rb'
