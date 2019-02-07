@@ -3,8 +3,11 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/265bb465dc552749142e/maintainability)](https://codeclimate.com/github/Sindex42/acebook-team-rocket/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/265bb465dc552749142e/test_coverage)](https://codeclimate.com/github/Sindex42/acebook-team-rocket/test_coverage)
 
+A two week group project to build a facebook clone using Ruby on Rails and React
+
 * Our application is deployed on [Heroku](https://acebook-team-rocket.herokuapp.com)
 * Our [Trello board](https://trello.com/b/wJgduTRo/acebook-team-rocket) 
+* A separate frontend app that connects to the backend of this Rails app can be found [here](https://github.com/GabMat97/Acebook-team-rocket-frontend)
 
 
 ## How to contribute to this project
