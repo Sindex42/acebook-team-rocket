@@ -3,7 +3,10 @@
 <% end %>
 
 <% @posts.each do |post| %>
-  <p><b><%= post.message %></b></p>
+  <p><% post.message.split("\r\n").each do |msg| %>
+    <b><%=msg %></b><br>
+  <% end %></p>
+  by <%= post.user.name %>
   <br>
   <p><%= post.created_at %></p>
   <br>
