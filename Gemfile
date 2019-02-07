@@ -63,3 +63,5 @@ group :test do
   gem 'faker', '~> 1.9'
   gem 'shoulda-matchers'
 end
+
+gem 'jwt', '~> 2.1'
