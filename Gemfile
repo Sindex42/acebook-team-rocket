@@ -38,6 +38,7 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'database_cleaner', '~> 1.7'
+
   gem 'orderly', '~> 0.0.3'
   gem 'rspec-rails', '~> 3.5'
   gem 'selenium-webdriver'
@@ -56,3 +57,9 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'simplecov', '~> 0.16.1'
 
 gem 'simplecov-console', '~> 0.4.2'
+
+group :test do
+  gem 'factory_bot_rails', '~> 5.0'
+  gem 'faker', '~> 1.9'
+  gem 'shoulda-matchers'
+end

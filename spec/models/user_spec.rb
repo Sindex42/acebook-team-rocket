@@ -3,5 +3,7 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  it { is_expected.to be }
+  it { should validate_presence_of(:name) }
+  it { should validate_presence_of(:eamail) }
+  it { should validate_presence_of(:password_digest) }
 end
