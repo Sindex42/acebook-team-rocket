@@ -4,11 +4,13 @@ class PostsController < ApplicationController
   before_action :require_login
 
   def new
-    @post = Post.new
+    @post = current_user.posts.new
   end
 
   def create
-    @post = Post.create(post_params)
+    @post = Post.new(post_params)
+    @post.user = current_user
+    @post.save
     redirect_to posts_url
   end
 
@@ -38,7 +40,7 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:message)
+    params.require(:post).permit(:message, :user_id)
   end
 
   def require_login
