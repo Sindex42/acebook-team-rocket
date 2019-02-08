@@ -6,11 +6,12 @@
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
+    <link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
   </head>
 
   <body>
     <% if current_user %>
-      <%= link_to 'Home', root_path %> | <%= link_to 'Log Out', logout_path, method: :delete %> | <%= "Logged in as #{current_user.name}" %> 
+      <%= link_to 'Home', root_path %> | <%= link_to 'Log Out', logout_path, method: :delete %> | <%= "Logged in as #{current_user.name}" %>
     <% else %>
       <%= link_to 'Home', root_path %> | <%= link_to 'Sign In', login_path %> or <%= link_to 'Sign Up', new_user_path %>
     <% end %>
