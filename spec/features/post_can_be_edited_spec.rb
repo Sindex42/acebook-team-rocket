@@ -6,7 +6,7 @@ RSpec.feature 'edit post', type: :feature do
 
   scenario 'Can edit post' do
     hello_message
-    expect(page).to have_link('Edit', href: '/posts/3/edit')
+    expect(page).to have_link('Edit', href: '/posts/4/edit')
   end
 
   scenario 'An edited post can be displayed' do

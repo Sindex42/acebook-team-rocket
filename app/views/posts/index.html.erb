@@ -10,11 +10,12 @@
   <br>
   <p><%= post.created_at %></p>
   <br>
-  <% if post.created_at + 10.minutes > Time.now %>
-  <%= link_to "Edit", edit_post_path(post.id) %>
+  <% if current_user.id == post.user_id %>
+    <% if post.created_at + 10.minutes > Time.now %>
+    <%= link_to "Edit", edit_post_path(post.id) %>
+    <% end %>
+    <%= link_to "Delete", post_path(post), method: :delete %>
   <% end %>
-  <%= link_to "Delete", post_path(post), method: :delete %>
-
 <% end %>
 
 
