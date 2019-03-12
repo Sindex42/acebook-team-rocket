@@ -34,6 +34,8 @@ To run the tests: `bundle exec rspec`
 
 ### Signing up
 
+![Imgur](http://i.imgur.com/NSdBKQn.png)
+
 * Users can click on a link which will take them to a signup page.
 * Fill in the form with a name, email address, and provide a password and password confirmation.
   * All fields must be present
@@ -44,11 +46,15 @@ To run the tests: `bundle exec rspec`
 
 ### Signing in
 
+![Imgur](http://i.imgur.com/aRm26q2.png)
+
 * Users will be redirected to the welcome page if accessing any pages relating to posts and are not signed in 
 * Users will be redirected to the posts page if sign in is successful
 * Users will see a welcome message upon signing in
 
 ### Posts
+
+![Imgur](http://i.imgur.com/YNzXHJ8.png)
 
 * Users can see posts in reverse chronological order
 * Users can see the time and date of creation of a particular post
