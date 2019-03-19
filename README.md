@@ -10,8 +10,10 @@ A two week group project to build a facebook clone using Ruby on Rails and React
 * A separate frontend app that connects to the backend of this Rails app can be found [here](https://github.com/GabMat97/Acebook-team-rocket-frontend)
 
 
-## How to contribute to this project
-See [CONTRIBUTING.md](CONTRIBUTING.md)
+## Learning log
+
+* To see a log of our learnings throughout this project, please refer to our project [wiki](https://github.com/Sindex42/acebook-team-rocket/wiki)
+
 
 ## Getting started
 
@@ -77,9 +79,10 @@ Tech | Description
 [Faker](https://github.com/stympy/faker) | A library for generating fake data, used for stubbing AJAX requests
 [React](https://reactjs.org/) | A JavaScript library for building our frontend app 
 
-## Learning log
 
-* To see a log of our learnings throughout this project, please refer to our project [wiki](https://github.com/Sindex42/acebook-team-rocket/wiki)
+## How to contribute to this project
+See [CONTRIBUTING.md](CONTRIBUTING.md)
+
 
 ## Contributors
 
